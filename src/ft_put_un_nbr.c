@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_un_nbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erpiana <erpiana@student.42.rio>           +#+  +:+       +#+        */
+/*   By: erpiana <erpiana@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:39:12 by erpiana           #+#    #+#             */
-/*   Updated: 2023/11/04 20:39:17 by erpiana          ###   ########.fr       */
+/*   Updated: 2024/02/20 01:05:43 by erpiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_put_un_nbr(unsigned int nbr)
 {

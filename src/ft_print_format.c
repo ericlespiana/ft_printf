@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erpiana <erpiana@student.42.rio>           +#+  +:+       +#+        */
+/*   By: erpiana <erpiana@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:17:04 by erpiana           #+#    #+#             */
-/*   Updated: 2023/11/08 15:47:35 by erpiana          ###   ########.fr       */
+/*   Updated: 2024/02/20 01:05:32 by erpiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_print_format(int n, va_list ap)
 {

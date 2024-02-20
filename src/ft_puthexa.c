@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erpiana <erpiana@student.42.rio>           +#+  +:+       +#+        */
+/*   By: erpiana <erpiana@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 20:40:02 by erpiana           #+#    #+#             */
-/*   Updated: 2023/11/08 15:48:16 by erpiana          ###   ########.fr       */
+/*   Updated: 2024/02/20 01:05:49 by erpiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 static int	convert_hexa(unsigned long long x, char *symbols)
 {

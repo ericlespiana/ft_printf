@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erpiana <erpiana@student.42.rio>           +#+  +:+       +#+        */
+/*   By: erpiana <erpiana@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:19:32 by erpiana           #+#    #+#             */
-/*   Updated: 2023/11/08 15:48:45 by erpiana          ###   ########.fr       */
+/*   Updated: 2024/02/20 01:07:23 by erpiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+
 # include <stdarg.h>
-# include "./libft/libft.h"
+# include "libft.h"
 
 int	ft_printf(const char *format, ...);
 int	ft_putchar(int c);

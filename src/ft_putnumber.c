@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnumber.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erpiana <erpiana@student.42.rio>           +#+  +:+       +#+        */
+/*   By: erpiana <erpiana@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:36:40 by erpiana           #+#    #+#             */
-/*   Updated: 2023/11/07 14:52:48 by erpiana          ###   ########.fr       */
+/*   Updated: 2024/02/20 01:05:52 by erpiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_putnumber(int nbr)
 {

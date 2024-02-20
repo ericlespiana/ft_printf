@@ -3,36 +3,69 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: erpiana <erpiana@student.42.rio>           +#+  +:+       +#+         #
+#    By: erpiana <erpiana@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/04 21:28:19 by erpiana           #+#    #+#              #
-#    Updated: 2023/11/04 21:37:05 by erpiana          ###   ########.fr        #
+#    Updated: 2024/02/20 01:16:59 by erpiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ./ft_printf.c ./libft/ft_strchr.c ./srcs/ft_print_format.c ./srcs/ft_put_un_nbr.c \
-	./srcs/ft_putchar.c ./srcs/ft_puthexa.c ./srcs/ft_putnumber.c ./srcs/ft_putstr.c \
-	./libft/ft_strlen.c
+#******************************************************************************#
+#                                   PATH                                       #
+#******************************************************************************#
 
-OBJS = $(SRCS:.c=.o)
+SRCS_PATH	:=	src/
+INCS		:=	include/
+CPPFLAGS	:=	$(addprefix -I, $(INCS)) -MP
 
-CC = cc
-RM = rm -f
-CFLAGS = -Wall -Wextra -Werror
+#******************************************************************************#
+#                                   FILES                                      #
+#******************************************************************************#
 
-NAME = libftprintf.a
+SRC			:=	$(addprefix $(SRCS_PATH), ft_print_format.c ft_printf.c ft_put_un_nbr.c ft_putchar.c ft_puthexa.c \
+				ft_putnumber.c ft_putstr.c ft_strchr.c ft_strlen.c)
+OBJS 		+=	$(addprefix obj/, $(notdir $(SRC:.c=.o)))
+NAME 		:=	libftprintf.a
+
+#******************************************************************************#
+#                                 COMPILATION                                  #
+#******************************************************************************#
+
+CC			:=	cc
+CFLAGS		:=	-Wall -Wextra -Werror
+
+#******************************************************************************#
+#                                 BASH COMMANDS                                #
+#******************************************************************************#
+
+RM			:=	rm -rf
+
+#******************************************************************************#
+#                                   TARGETS                                    #
+#******************************************************************************#
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): obj $(OBJS)
+	
+obj:
+	mkdir -p obj
+
+obj/%.o: $(SRCS_PATH)%.c
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+	echo "Compilando $(notdir $<)"
+	ar -rcs $(NAME) $@
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) obj
 
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
 .PHONY: all clean fclean re
+
+.DEFAULT_GOAL := all
+
+.SILENT:
